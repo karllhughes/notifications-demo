@@ -2,11 +2,18 @@
 
 namespace App\Notifications;
 
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class RegistrationCompleted extends Notification
+class RegistrationCompleted extends Notification implements ShouldQueue
 {
+    /**
+     * Directs the notification to use your queue
+     */
+    use Queueable;
+
     public $data;
 
     /**
