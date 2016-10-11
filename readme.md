@@ -1,27 +1,12 @@
-# Laravel PHP Framework
+# Laravel 5.3 Notifications Demo
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Created by [Karl Hughes]() for the [Laravel Chicago meetup group](http://www.meetup.com/laravel-chicago/) on October 25, 2016.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## About this project
+This repository contains several branches - one for each feature of the Laravel Notifications system that I wanted to demo. You can follow along using the [original presentation on Google Drive](https://docs.google.com/presentation/d/109VHOOHBmyRD-7xb1vgfYrHgNCvi23i3ct91MFzrops/edit?usp=sharing) or just check out the diffs between branches.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+### Branches
+- `mail` - Demo of the [Laravel Mail feature](https://laravel.com/docs/5.3/mail).
+- `notifications` - Demo of the [Laravel Notifications feature](https://laravel.com/docs/5.3/notifications).
+- `mail-vs-notifications` - Demonstrating the differences between using the Mail and Notifications features.
+- `notifications-via` - Showing how to use the `via()` method to select notification providers.
