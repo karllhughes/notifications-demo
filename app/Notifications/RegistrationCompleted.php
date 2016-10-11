@@ -19,11 +19,15 @@ class RegistrationCompleted extends Notification implements ShouldQueue
     /**
      * Create a new notification instance.
      *
+     * @param $data array
+     * @param $queue string
+     *
      * @return void
      */
-    public function __construct($data = [])
+    public function __construct($data = [], $queue = 'notifications')
     {
         $this->data = $data;
+        $this->queue = $queue;
     }
 
     /**
