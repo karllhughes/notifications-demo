@@ -1,18 +1,32 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
+use App\Mail\RegistrationCompleted;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
-/*
-|--------------------------------------------------------------------------
-| Console Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of your Closure based console
-| commands. Each Closure is bound to a command instance allowing a
-| simple approach to interacting with each command's IO methods.
-|
-*/
+Artisan::command('mail', function () {
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->describe('Display an inspiring quote');
+    // Using faker for some faux data
+    $faker = Faker\Factory::create();
+
+    // This is the data for our Mailer
+    $data = [
+        'to' => [
+            'first_name' => $faker->firstName(),
+            'email' => 'khughes.me@gmail.com',
+        ],
+        'from' => [
+            'first_name' => $faker->firstName(),
+            'company' => $faker->company(),
+            'email' => $faker->email(),
+            'address' => $faker->address(),
+        ],
+        'link' => [
+            'url' => $faker->url(),
+            'text' => $faker->sentence(),
+        ],
+    ];
+
+    // Send our mail
+    Mail::send(new RegistrationCompleted($data));
+});
