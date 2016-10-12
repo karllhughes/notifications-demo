@@ -56,8 +56,10 @@ Artisan::command('notify', function () {
         ],
     ];
 
-    // Send our mail
-    $user->notify(new NotificationObject($data));
+    // Send our notification in 120 seconds
+    $notification = new NotificationObject($data);
+    $notification->delay(\Carbon\Carbon::now()->addSecond(120));
+    $user->notify($notification);
 });
 
 Artisan::command('notify-trait', function () {
