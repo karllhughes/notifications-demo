@@ -27,7 +27,12 @@ class RegistrationCompleted extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return [
+            $notifiable->subscribed_to_email ? 'mail' : null,
+            $notifiable->subscribed_to_sms ? 'nexmo' : null,
+            $notifiable->subscribed_to_slack ? 'slack' : null,
+            'database',
+        ];
     }
 
     /**
