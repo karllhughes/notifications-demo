@@ -2,8 +2,8 @@
 
 namespace App\Notifications;
 
+use App\Notifications\Messages\CustomMessage;
 use Illuminate\Notifications\Notification;
-use Illuminate\Notifications\Messages\MailMessage;
 
 class RegistrationCompleted extends Notification
 {
@@ -38,13 +38,13 @@ class RegistrationCompleted extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
+        return (new CustomMessage)
             ->subject('Registration Completed!')
             // Optional: Makes this an error notification
             // ->error()
             ->line("Hi {$notifiable->name},")
             ->line("Your registration is now complete. Thanks, and don't forget to come back to our site!")
             ->action($this->data['link']['text'], $this->data['link']['url'])
-            ->line("Have a great day!");
+            ->goodbye("Have a great day!");
     }
 }

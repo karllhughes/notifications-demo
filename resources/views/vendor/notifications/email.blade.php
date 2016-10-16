@@ -138,10 +138,12 @@ $style = [
                                             </p>
                                         @endforeach
 
-                                        <!-- Salutation -->
+                                        <!-- Goodbye -->
+                                        @if ($goodbye)
                                         <p style="{{ $style['paragraph'] }}">
-                                            Regards,<br>{{ config('app.name') }}
+                                            {{ $goodbye }}
                                         </p>
+                                        @endif
 
                                         <!-- Sub Copy -->
                                         @if (isset($actionText))
