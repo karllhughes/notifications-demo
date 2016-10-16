@@ -39,6 +39,9 @@ class RegistrationCompleted extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+            ->subject('Registration Completed!')
+            // Optional: Makes this an error notification
+            // ->error()
             ->line("Hi {$notifiable->name},")
             ->line("Your registration is now complete. Thanks, and don't forget to come back to our site!")
             ->action($this->data['link']['text'], $this->data['link']['url'])
