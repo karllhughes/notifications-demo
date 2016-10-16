@@ -60,7 +60,7 @@ Artisan::command('notify', function () {
     $user->notify(new NotificationObject($data));
 });
 
-Artisan::command('notify-trait', function () {
+Artisan::command('notify-many', function () {
 
     // Using faker for some faux data
     $faker = Faker\Factory::create();
