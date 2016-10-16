@@ -9,6 +9,7 @@ This repository contains several branches - one for each feature of the Laravel 
 - [mail](https://github.com/karllhughes/notifications-demo/tree/mail) - Demo of the [Laravel Mail feature](https://laravel.com/docs/5.3/mail).
 - [notifications](https://github.com/karllhughes/notifications-demo/tree/notifications) - Demo of the [Laravel Notifications feature](https://laravel.com/docs/5.3/notifications).
 - [calling](https://github.com/karllhughes/notifications-demo/tree/calling) - Comparison of the Notification trait vs. Facade.
+- [via](https://github.com/karllhughes/notifications-demo/tree/via) - Showing the use of multiple notification channels.
 - [queueing](https://github.com/karllhughes/notifications-demo/tree/queueing) - Making a notification queueable.
 - [testing](https://github.com/karllhughes/notifications-demo/tree/testing) - Example of unit testing a notification flow.
 - [delaying](https://github.com/karllhughes/notifications-demo/tree/delaying) - Delaying delivery of a notification.
