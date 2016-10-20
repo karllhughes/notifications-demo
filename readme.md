@@ -11,16 +11,21 @@ This repository contains several branches - one for each feature of the Laravel 
 - [calling](https://github.com/karllhughes/notifications-demo/tree/calling) - Comparison of the Notification trait vs. Facade.
 - [via](https://github.com/karllhughes/notifications-demo/tree/via) - Showing the use of multiple notification channels.
 - [queueing](https://github.com/karllhughes/notifications-demo/tree/queueing) - Making a notification queueable.
-- [testing](https://github.com/karllhughes/notifications-demo/tree/testing) - Example of unit testing a notification flow.
 - [delaying](https://github.com/karllhughes/notifications-demo/tree/delaying) - Delaying delivery of a notification.
-- [email-notifications](https://github.com/karllhughes/notifications-demo/tree/email-notifications) - Detailed example of email notifications.
-- [db-notifications](https://github.com/karllhughes/notifications-demo/tree/db-notifications) - Detailed example of saving/updating/deleting notifications from a database.
-- [events](https://github.com/karllhughes/notifications-demo/tree/events) - Using an event listener to track notifications.
-- [custom-channel](https://github.com/karllhughes/notifications-demo/tree/custom-channel) - Demonstrating a custom notification channel.
+- [testing](https://github.com/karllhughes/notifications-demo/tree/testing) - Example of unit testing a notification flow.
+- [email-notifications](https://github.com/karllhughes/notifications-demo/tree/email-notifications) - Detailed example of email notifications, composing custom views, custom email message objects.
+
+### Covered elsewhere
+- [db-notifications](https://github.com/jobapis/jobs-to-mail/blob/master/app/Notifications/JobsCollected.php) - Creating database entries for each notification sent using JobsToMail as an example.
 
 ### Not covered
 I didn't have time to show everything that you can do with Laravel notifications, so refer to the docs to learn more about:
 
 - Broadcasting notifications to a frontend.
-- SMS notifications.
-- Slack notifications.
+- Notification events.
+- SMS, Slack notifications.
+- Custom notification channels.
+
+### Further reading
+- [Official Laravel Notifications documentation](https://mattstauffer.co/blog/the-new-notification-system-in-laravel-5-3)
+- [Matt Stauffer's tutorial](https://mattstauffer.co/blog/the-new-notification-system-in-laravel-5-3)
