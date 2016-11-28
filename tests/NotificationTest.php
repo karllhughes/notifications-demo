@@ -31,13 +31,12 @@ class NotificationTest extends TestCase
 
     public function testItCanSendNotificationToManyUsers()
     {
-        $this->markTestSkipped(
-            "Won't work for multiple notifications yet. PR outstanding: https://github.com/laravel/framework/pull/15804"
-        );
         $times = rand(2, 10);
         Notification::fake();
 
-        $collection = collect([$this->userModel]);
+        $collection = collect([
+            $this->userModel,
+        ]);
 
         $user = [
             'name' => $this->faker->name(),
@@ -47,6 +46,9 @@ class NotificationTest extends TestCase
         $this->userModel->shouldReceive('newInstance')
             ->times($times)
             ->andReturnSelf();
+        // Each notifiable object must have a unique key
+        $this->userModel->shouldReceive('getKey')
+            ->andReturn(uniqid());
         $this->userModel->shouldReceive('toArray')
             ->times($times)
             ->andReturn($user);
